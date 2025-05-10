@@ -13,4 +13,43 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--font, Arial, sans-serif);
+  color: var(--main-color);
+  font-variation-settings: "wght" var(--card-font-weight, 400);
+  background-image: var(--bg-image);
+  background-color: (--bg-color);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  padding-block: 100px;
+}
+
+.container {
+  margin: 0 auto;
+  inline-size: 100%;
+  max-inline-size: 700px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--main-color, #000);
+  font-family: var(--accent-font, monospace);
+  text-transform: uppercase;
+  background-color: var(--bg-color, #fff);
+  padding-block: clamp(120px, 10vw, 128px);
+}
+
+.header__logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+  margin-block-end: 20px;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  text-decoration: none;
 }
