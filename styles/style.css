@@ -28,8 +28,7 @@
 
 .container {
   margin: 0 auto;
-  inline-size: 100%;
-  max-inline-size: 700px;
+  inline-size: var(--card-inline-size);
 }
 
 .header__container {
@@ -53,3 +52,187 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-decoration: none;
 }
+
+.card {
+  border: 2px solid var(--main-color, #000);
+  background-color: var(--bg-color, #fff);
+  margin-block-end: 50px;
+}
+
+.card__title {
+  font-size: var(--main-font-size, 1.125rem);
+  font-weight: 700;
+  padding-inline: 10px;
+  padding-block: 3px;
+  line-height: normal;
+  font-variation-settings: 'wght' var(--card-title-font-weight, 700);
+}
+
+.card__img-wrapper {
+  position: relative;
+  border-top: 2px solid var(--main-color, #000);
+  border-bottom: 2px solid var(--main-color, #000);
+}
+
+.card__image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+  vertical-align: middle;
+}
+
+.card__image-label {
+  position: absolute;
+  opacity: 50%;
+  color: var(--main-color, #000);
+  font-family: var(--accent-font, monospace);
+  font-size: var(--accetn-font-size, 0.875rem);
+  text-transform: uppercase;
+  text-shadow: 
+  -1px 0 var(--bg-color, #fff)
+  0 1px var(--bg-color, #fff)
+  1px 0 var(--bg-color, #fff)
+  0 -1px var(--bg-color, #fff);
+  mix-blend-mode: hard-light;
+  top: 20px;
+  right: 20px;
+}
+
+@supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+  .card__image-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--bg-color, #fff);
+    text-stroke: 1px var(--bg-color, #fff);
+  }
+}
+
+.card__content {
+  padding: 25px;
+}
+
+.card__description {
+  font-size: var(--main-font-size, 1.125rem);
+}
+
+.card__content p:not(:last-of-type) {
+  margin-block-end: 27px;
+}
+
+.card__image--brightness {
+  filter: brightness(150%);
+  -webkit-filter: brightness(150%);
+}
+
+.card__image--blur {
+  filter: blur(0.3rem);
+  -webkit-filter: blur(0.3rem);
+}
+
+.card__image--contrast {
+  filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+}
+
+.card__image--opacity {
+  filter: opacity(0.5);
+  -webkit-filter: opacity(0.5);
+}
+
+.card__image-grayscale {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
+.card__image--saturate {
+  filter: brightness(150%) sepia(0.7) saturate(200%);
+  -webkit-filter: brightness(150%) sepia(0.7) saturate(200%);
+}
+
+.card__image--invert {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+.card__image--sepia {
+  filter: sepia(0.5);
+  -webkit-filter: sepia(0.5);
+}
+
+.card__buttons {
+  margin-block-start: 25px;
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  background-color: transparent;
+  transition: 0.3 ease;
+  cursor: pointer;
+  -webkit-transition: 0.3 ease;
+  -moz-transition: 0.3 ease;
+  -ms-transition: 0.3 ease;
+  -o-transition: 0.3 ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--main-color, #000);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  fill: var(--heart-hover, #000);
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+.core {
+  fill: trasnsparent;
+  transition: 0.03s 0.3s;
+  -webkit-transition: 0.3s 0.03s;
+  -moz-transition: 0.03s 0.3s;
+  -ms-transition: 0.03s 0.3s;
+  -o-transition: 0.03s 0.3s;
+}
+
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-color, #000);
+  transition: 0.3s 0s;
+  -webkit-transition: 0.3s 0s;
+  -moz-transition: 0.3s 0s;
+  -ms-transition: 0.3s 0s;
+  -o-transition: 0.3s 0s;
+}
+
+.like-icon:active .core {
+  fill: #FF0000;
+  transition: 0.3s 0s;
+  -webkit-transition: 0.3s 0s;
+  -moz-transition: 0.3s 0s;
+  -ms-transition: 0.3s 0s;
+  -o-transition: 0.3s 0s;
+}
+
