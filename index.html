@@ -500,18 +500,23 @@
         onclick="window['dialog'].showModal()"
         aria-controls="dialog"
       >
-        <svg class="floppy">
+        <svg class="floppy" width="21" height="21" viewBox="0 0 21 21">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
     <dialog class="modal" id="dialog">
-      <svg class="floppy floppy--modal">
-        <use href="./svg/floppy.svg#floppy"></use>
-      </svg>
-      <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
-      <button class="button save-button modal__button" onclick="window['dialog'].close()">
+      <div class="modal__container">
+        <svg class="floppy floppy--modal" width="21" height="21" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
+      </div>
+      <button
+        class="button save-button modal__button"
+        onclick="window['dialog'].close()"
+      >
         <span class="button__text">Ок</span>
       </button>
     </dialog>
