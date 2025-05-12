@@ -16,7 +16,7 @@
   <body class="page">
     <header class="header">
       <div class="container header__container">
-        <a href="#0" class="header__logo">&lt;/HTML&gt;</a>
+        <a class="header__logo">&lt;/HTML&gt;</a>
         <h1 class="header__title">Закрывающий тег</h1>
       </div>
     </header>
@@ -49,6 +49,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -74,7 +75,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -108,6 +109,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -133,7 +135,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -165,6 +167,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -190,7 +193,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -224,6 +227,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -249,7 +253,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -284,6 +288,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -309,7 +314,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -341,6 +346,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -366,7 +372,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -385,7 +391,7 @@
         <div class="card__content">
           <p class="card__description">
             Во время учёбы часто возникает чувство, когда не знаешь, за что
-            хвататься. Вроде и проектную <br>пора сдавать, и задачи хочется
+            хвататься. Вроде и проектную пора сдавать, и задачи хочется
             порешать, и в теории получше разобраться, и жизнь не забыть пожить.
             В такие моменты очень нужна концентрация. Вспомните, откуда вы её
             черпали.
@@ -400,6 +406,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -425,7 +432,7 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -461,6 +468,7 @@
                 viewBox="0 0 39 36"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
               >
                 <g class="heart">
                   <path
@@ -486,35 +494,39 @@
                 />
               </svg>
             </button>
-            <button class="button card__like-button">
+            <button class="button card__like-button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </div>
       </article>
     </main>
-    <footer class="footer">
-      <button
-        class="button save-button"
-        type="button"
-        onclick="window['dialog'].showModal()"
-        aria-controls="dialog"
-      >
-        <svg class="floppy" width="21" height="21" viewBox="0 0 21 21">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
+    <button
+      class="button save-button"
+      type="button"
+      onclick="window['dialog'].showModal()"
+      aria-controls="dialog"
+    >
+      <svg class="floppy" width="21" height="21" viewBox="0 0 21 21">
+        <use href="./svg/floppy.svg#floppy"></use>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
     <dialog class="modal" id="dialog">
       <div class="modal__container">
-        <svg class="floppy floppy--modal" width="21" height="21" viewBox="0 0 21 21">
+        <svg
+          class="floppy floppy--modal"
+          width="21"
+          height="21"
+          viewBox="0 0 21 21"
+        >
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
       </div>
       <button
         class="button save-button modal__button"
+        type="button"
         onclick="window['dialog'].close()"
       >
         <span class="button__text">Ок</span>

@@ -10,22 +10,6 @@
 
 */
 
-@keyframes triangle-move {
-  from {
-    transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    -o-transform: translateX(0px);
-}
-  to {
-    transform: translateX(4px);
-    -webkit-transform: translateX(4px);
-    -moz-transform: translateX(4px);
-    -ms-transform: translateX(4px);
-    -o-transform: translateX(4px);
-}
-}
 
 @keyframes heart-scale {
   0% {
